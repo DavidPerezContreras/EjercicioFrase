@@ -1,24 +1,35 @@
-
+import java.util.Scanner;
 public class Main {
 
 	public static void main(String []args) {
-		ejercicio1("HolaoOo",'o');
+		ejercicio1();
 		
 		
 	}
 	
-	static void ejercicio1(String frase, Character letra) {
+	static void ejercicio1() {
 		
-		frase=frase.replace(Character.toString(letra), "");
-		frase=frase.replace(Character.toString(letra).toUpperCase(), "");
-		frase=frase.replace(Character.toString(letra).toLowerCase(), "");
+		//Inicializar variables
+		Scanner teclado = new Scanner(System.in);
+		String frase="";
+		String letra="";
+		
+		//Pide al usuario que escriba una frase
+		System.out.println("Escribe una frase");
+		frase = teclado.nextLine();
+		
+		//Pide al usuario que escriba una letra
+		System.out.println("Escribe una letra o frase para eliminarla");
+		letra = teclado.nextLine();
 		
 		
-		/*for(int i=0;i<frase.length();i++) {
-			if(frase.charAt(i)==letra) {
-				
-			}
-		}*/
+		
+		//reemplaza la letra con una cadena vacía (no un espacio)
+		frase=frase.replace(letra, "");
+		
+		
+		
+
 		
 		System.out.println(frase);
 		
