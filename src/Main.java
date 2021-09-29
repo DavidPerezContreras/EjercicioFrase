@@ -23,7 +23,7 @@ public class Main {
 		letra = teclado.nextLine();
 		
 		
-		
+		teclado.close();
 		//reemplaza la letra con una cadena vacía (no un espacio)
 		frase=frase.replace(letra, "");
 		
